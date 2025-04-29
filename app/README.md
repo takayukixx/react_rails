@@ -1,4 +1,4 @@
-#React+Rails 環境構築
+# React+Rails 環境構築
 
 docker-compose run back rails new . --force --database=mysql --skip-docker --api
 docker compose build
