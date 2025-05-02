@@ -28,8 +28,14 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     command: yarn start
+    volumes:
+      - ./frontend:/app
+      - node_modules:/app/node_modules
+      - next:/app/.next
     ports:
       - "8000:3000"
 volumes:
   mysql_data:
+  node_modules:
+  next:
 
