@@ -1,6 +1,8 @@
-# React+Rails 環境構築
+# React+Rails environment construction
 
 ## backend
+
+touch ./backend/.env.local
 
 docker-compose run back rails new . --force --database=mysql --skip-docker --api
 

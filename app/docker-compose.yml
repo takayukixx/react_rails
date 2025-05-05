@@ -1,4 +1,5 @@
 version: "3"
+name: template
 services:
   db:
     image: mysql:8.0
