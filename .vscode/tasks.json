@@ -1,0 +1,180 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Rails: Start Server",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["exec", "back", "rails", "s", "-b", "0.0.0.0"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Rails: Run Tests",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["exec", "back", "rspec"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Rails: RuboCop Lint",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["exec", "back", "rubocop"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Rails: RuboCop Fix",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["exec", "back", "rubocop", "-a"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Next.js: Start Dev Server",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "options": {
+        "cwd": "${workspaceFolder}/app/frontend"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Next.js: Run Tests",
+      "type": "shell",
+      "command": "npm",
+      "args": ["test"],
+      "options": {
+        "cwd": "${workspaceFolder}/app/frontend"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Next.js: ESLint",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "lint"],
+      "options": {
+        "cwd": "${workspaceFolder}/app/frontend"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "Next.js: ESLint Fix",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "lint:fix"],
+      "options": {
+        "cwd": "${workspaceFolder}/app/frontend"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "Next.js: Prettier Format",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "format"],
+      "options": {
+        "cwd": "${workspaceFolder}/app/frontend"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Build and Start",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["up", "--build"],
+      "options": {
+        "cwd": "${workspaceFolder}/app"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Stop",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["down"],
+      "options": {
+        "cwd": "${workspaceFolder}/app"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

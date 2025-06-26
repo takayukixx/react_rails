@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rails Server",
+      "type": "rdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/app/backend/bin/rails",
+      "args": ["server", "-b", "0.0.0.0"],
+      "cwd": "${workspaceFolder}/app/backend",
+      "env": {
+        "RAILS_ENV": "development"
+      }
+    },
+    {
+      "name": "RSpec Tests",
+      "type": "rdbg", 
+      "request": "launch",
+      "program": "${workspaceFolder}/app/backend/bin/rspec",
+      "args": ["${file}"],
+      "cwd": "${workspaceFolder}/app/backend",
+      "env": {
+        "RAILS_ENV": "test"
+      }
+    },
+    {
+      "name": "Next.js Dev Server",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/app/frontend/node_modules/.bin/next",
+      "args": ["dev", "--turbopack"],
+      "cwd": "${workspaceFolder}/app/frontend",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Jest Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/app/frontend/node_modules/.bin/jest",
+      "args": ["--runInBand", "${fileBasenameNoExtension}"],
+      "cwd": "${workspaceFolder}/app/frontend",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

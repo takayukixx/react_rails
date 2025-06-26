@@ -1,0 +1,23 @@
+{
+  "ruby.rubocop.executePath": "",
+  "ruby.rubocop.configFilePath": ".rubocop.yml",
+  "ruby.format": "rubocop",
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "rebornix.ruby",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.rubocop": "explicit"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "rebornix.ruby",
+    "editor.formatOnSave": true
+  },
+  "files.associations": {
+    "*.rb": "ruby",
+    "Gemfile": "ruby",
+    "Rakefile": "ruby",
+    "config.ru": "ruby"
+  }
+}

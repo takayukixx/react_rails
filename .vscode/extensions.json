@@ -1,0 +1,39 @@
+{
+  "recommendations": [
+    // Prettier and ESLint
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    
+    // Ruby and Rails
+    "rebornix.ruby",
+    "misogi.ruby-rubocop",
+    "koichisasada.vscode-rdbg",
+    
+    // TypeScript and React
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-json",
+    
+    // Testing
+    "orta.vscode-jest",
+    "ms-vscode.test-adapter-converter",
+    
+    // Docker and Database
+    "ms-azuretools.vscode-docker",
+    "ms-ossdata.vscode-postgresql",
+    
+    // General development
+    "ms-vscode.vscode-npm-script",
+    "christian-kohler.path-intellisense",
+    "formulahendry.auto-rename-tag",
+    "ms-vscode.vscode-yaml",
+    
+    // Git
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github"
+  ],
+  "unwantedRecommendations": [
+    "ms-vscode.vscode-typescript",
+    "hookyqr.beautify"
+  ]
+}
